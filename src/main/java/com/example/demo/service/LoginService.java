@@ -1,12 +1,11 @@
 package com.example.demo.service;
 
-import com.example.demo.entity.User;
-
-import java.util.List;
+import com.alibaba.fastjson.JSONObject;
+import com.example.demo.dto.Msg;
 
 public interface LoginService {
 
-    User doCreate(String username, String password);
+    Msg<?> doLogin(JSONObject params);
 
-    List<User> findUserList(String username);
+    Msg<?> doCreate(JSONObject params);
 }
