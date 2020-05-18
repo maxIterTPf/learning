@@ -8,4 +8,5 @@ public interface LoginService {
     Msg<?> doLogin(JSONObject params);
 
     Msg<?> doCreate(JSONObject params);
+
 }

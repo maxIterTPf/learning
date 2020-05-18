@@ -10,12 +10,14 @@ import java.io.Serializable;
 @Data
 @Entity
 public class User implements Serializable {
+
     private static final long serialVersionUID = -8362687926082177182L;
+
     @Id
     private String uuid;
-    private String account;
-    private String username;
-    private String password;
+    private String account; // 用户名 可修改
+    private String username;// 登录名 不可修改
+    private String password;// 登录密码 不可修改
     private String salt;
 
     public static User create(String username, String password) {
@@ -37,4 +39,5 @@ public class User implements Serializable {
     public boolean verify(String password) {
         return md5Password(password, this.salt).equals(this.password);
     }
+
 }

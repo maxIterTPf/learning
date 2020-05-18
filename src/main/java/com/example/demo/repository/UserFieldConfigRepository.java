@@ -6,4 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface UserFieldConfigRepository extends JpaRepository<UserFieldConfig, String> {
 
     long countByField(String field);
+
 }
