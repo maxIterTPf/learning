@@ -18,7 +18,6 @@ spring:
       ddl-auto: update  # 指定为update，每次启动项目检测表结构有变化的时候会新增字段，表不存在时会新建，如果指定create，则每次启动项目都会清空数据并删除表，再新建
       naming:
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
-
 # 打印的日志保存到该路径下
 logging:
   file:
