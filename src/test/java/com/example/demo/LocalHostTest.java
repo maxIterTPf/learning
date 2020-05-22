@@ -3,12 +3,13 @@ package com.example.demo;
 import com.alibaba.fastjson.JSONObject;
 import com.example.demo.util.HttpsUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Test;
 import org.springframework.util.DigestUtils;
 
 import java.util.UUID;
 
 @Slf4j
-public class Test {
+public class LocalHostTest {
 
     private static final String BASE_URL = "https://localhost:8080";
     private static final String DO_LOGIN = BASE_URL + "/doLogin";
@@ -23,7 +24,7 @@ public class Test {
         System.out.println(DigestUtils.md5DigestAsHex("MessageDigest MD5".getBytes()));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void doLogin() {
         JSONObject json = new JSONObject();
         json.put("username", "111");
@@ -32,7 +33,7 @@ public class Test {
         log.info("\nurl: {} \njson: {} \npost: {}", DO_LOGIN, json, post);
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void doCreate() {
         JSONObject json = new JSONObject();
         json.put("username", "huqinggang");
@@ -41,7 +42,7 @@ public class Test {
         log.info("\nurl: {} \njson: {} \npost: {}", DO_CREATE, json, post);
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void addUserFieldConfig() {
         JSONObject json = new JSONObject();
         json.put("field", "生日");
@@ -52,7 +53,7 @@ public class Test {
         log.info("\nurl: {} \njson: {} \npost: {}", ADD_USER_FIELD_CONFIG, json, post);
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void deleteUserFieldConfig() {
         JSONObject json = new JSONObject();
         json.put("uuid", "edb3b0620e6044cba7de7b50a5cd427c");
@@ -60,7 +61,7 @@ public class Test {
         log.info("\nurl: {} \njson: {} \npost: {}", DELETE_USER_FIELD_CONFIG, json, post);
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void editUserFieldConfig() {
         JSONObject json = new JSONObject();
         json.put("uuid", "e29a5e7544ba4ab3a24dbca787e24f4d");
@@ -72,7 +73,7 @@ public class Test {
         log.info("\nurl: {} \njson: {} \npost: {}", EDIT_USER_FIELD_CONFIG, json, post);
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void findUserFieldConfig() {
         JSONObject json = new JSONObject();
         json.put("field", "签名");

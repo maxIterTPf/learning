@@ -20,7 +20,7 @@ public class Msg<M> implements Serializable {
         return msg;
     }
 
-    public static <M>Msg<M> sucMsg(M data) {
+    public static <M> Msg<M> sucMsg(M data) {
         Msg<M> msg = new Msg<>();
         msg.setCode(SUCCESS);
         msg.setData(data);
