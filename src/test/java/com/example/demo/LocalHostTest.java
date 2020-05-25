@@ -86,4 +86,14 @@ public class LocalHostTest {
         log.info("\nurl: {} \njson: {} \npost: {}", FIND_USER_FIELD_CONFIG, json, post);
     }
 
+    @Test
+    void addFieldLabel() {
+        JSONObject json = new JSONObject();
+        json.put("userUuid", "1641e7f835064284ae4f281011d7c5bb");
+        json.put("fieldUuid", "a0ba1067be0d459da2579ac9f4e2012d");
+        json.put("value", "2020-05-03");
+        String post = HttpsUtil.doPost("https://localhost:10001/user/editUserFieldLabel", json.toJSONString());
+        log.info("\nurl: {} \njson: {} \npost: {}", "https://localhost:10001/user/editUserFieldLabel", json, post);
+    }
+
 }

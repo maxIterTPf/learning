@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 10001
   ssl:  # 配置 https 证书 只能调用https接口
     key-store: classpath:keystore.p12
     key-store-password: emilia
