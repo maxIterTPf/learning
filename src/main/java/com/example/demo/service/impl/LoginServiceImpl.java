@@ -5,6 +5,7 @@ import com.example.demo.dto.Msg;
 import com.example.demo.entity.User;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.service.LoginService;
+// import com.example.demo.util.MailUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -64,5 +65,15 @@ public class LoginServiceImpl implements LoginService {
         }
         return Msg.sucMsg(userRepository.save(User.create(username, password)));
     }
+
+    // @Autowired
+    // private MailUtil mailUtil;
+    //
+    // public void sendEmailTest() {
+    //     String to = "xxxx@xx.xx";
+    //     String subject = "主题";
+    //     String text = "内容";
+    //     mailUtil.send(to, subject, text);
+    // }
 
 }

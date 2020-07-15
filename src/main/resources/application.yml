@@ -18,6 +18,12 @@ spring:
       ddl-auto: update  # 指定为update，每次启动项目检测表结构有变化的时候会新增字段，表不存在时会新建，如果指定create，则每次启动项目都会清空数据并删除表，再新建
       naming:
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+  mail:
+    host: smtp.qq.com # 邮件发送服务器 (qq)
+    port: 465 # ssl端口
+    username: xxxxxxxx@qq.com # 发件人
+    password: xxxxxxxxxxxxxx  # 授权码
+    properties: {'mail.smtp.ssl.enable': true}  # 开启ssl
 # 打印的日志保存到该路径下
 logging:
   file:
